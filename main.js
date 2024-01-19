@@ -65,7 +65,7 @@ for (let i = 0; i < team.length; i++) {
     } else if (key === "position") {
       document.body.innerHTML += `<p> Positon: ${team[i][key]}</p>`;
     } else {
-      document.body.innerHTML += `<p> Photo String: ${team[i][key]}</p>`;
+      document.body.innerHTML += `<img src=./img/${team[i][key]}>  `;
     }
   }
 }
