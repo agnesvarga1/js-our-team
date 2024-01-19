@@ -58,14 +58,21 @@ for (let i = 0; i < team.length; i++) {
   }
 }
 
+const cards = document.querySelector(".cards");
+const card = document.createElement("div");
+card.classList.add("card");
 for (let i = 0; i < team.length; i++) {
-  for (let key in team[i]) {
-    if (key === "fullName") {
-      document.body.innerHTML += `<p > Name: ${team[i][key]}</p>`;
-    } else if (key === "position") {
-      document.body.innerHTML += `<p> Positon: ${team[i][key]}</p>`;
-    } else {
-      document.body.innerHTML += `<img src=./img/${team[i][key]}>  `;
-    }
-  }
+  let teamMember = team[i];
+  cards.innerHTML += `<div class="card">
+  <div class="card-head">
+    <img
+      src="./img/${teamMember.photo}"
+      alt="photo team member"
+    />
+  </div>
+  <div class="card-foot">
+    <span>${teamMember.fullName}</span><br />
+    <span>${teamMember.position}</span>
+  </div>
+</div>`;
 }
