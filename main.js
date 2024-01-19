@@ -54,6 +54,18 @@ const team = [
 
 for (let i = 0; i < team.length; i++) {
   for (let key in team[i]) {
-    console.log(team[i][key]);
+    console.log(`${key} : ${team[i][key]} `);
+  }
+}
+
+for (let i = 0; i < team.length; i++) {
+  for (let key in team[i]) {
+    if (key === "fullName") {
+      document.body.innerHTML += `<p > Name: ${team[i][key]}</p>`;
+    } else if (key === "position") {
+      document.body.innerHTML += `<p> Positon: ${team[i][key]}</p>`;
+    } else {
+      document.body.innerHTML += `<p> Photo String: ${team[i][key]}</p>`;
+    }
   }
 }
